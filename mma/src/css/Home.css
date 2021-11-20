@@ -1,0 +1,48 @@
+.img-fluid {
+  height: 100px;
+}
+
+.homepageHeader {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -250%);
+  color: aliceblue;
+  font-size: 70px;
+  font-family: Roboto;
+  font-weight: lighter;
+}
+
+.homepageText {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -60%);
+  color: rgb(255, 255, 255);
+  font-size: 40px;
+  font-family: Roboto;
+  font-weight: lighter;
+}
+@font-face {
+  font-family: Roboto;
+  src: url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
+  font-weight: lighter;
+}
+
+.homepageHeader {
+  background: linear-gradient(90deg, #000, #fff, #000);
+  letter-spacing: 1px;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-repeat: no-repeat;
+  background-size: 80%;
+  animation: shine 5s linear infinite;
+}
+
+@keyframes shine {
+  0% {
+    background-position-x: -500%;
+  }
+  100% {
+    background-position-x: 500%;
+  }
+}

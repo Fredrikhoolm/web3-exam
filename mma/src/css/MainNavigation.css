@@ -1,0 +1,12 @@
+.navbar {
+  margin: 0px;
+}
+
+.navbar-brand {
+}
+
+.navbar-brand img {
+  height: 70px;
+  /* put value of image height as your need */
+  float: left;
+}
