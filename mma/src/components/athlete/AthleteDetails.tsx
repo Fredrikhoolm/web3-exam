@@ -38,23 +38,28 @@ const AthleteDetails: FC = () => {
               <h2>{athlete?.name}</h2>
             </Row>
             <Row>
-              <ListGroupItem>Alder: {"(placeholder)"}</ListGroupItem>
+              <h5>"{athlete?.nickname}"</h5>
             </Row>
             <Row>
-              <ListGroupItem>Vektklasse: {"(placeholder)"}</ListGroupItem>
+              <ListGroupItem>Alder: {athlete?.age}</ListGroupItem>
             </Row>
             <Row>
-              <ListGroupItem>Kampsportstil: {"(placeholder)"}</ListGroupItem>
+              <ListGroupItem>Vektklasse: {athlete?.division}</ListGroupItem>
             </Row>
             <Row>
-              <ListGroupItem>Kamphistorikk: {"(placeholder)"}</ListGroupItem>
+              <ListGroupItem>Kampsportstil: {athlete?.style}</ListGroupItem>
             </Row>
             <Row>
-              <ListGroupItem>Nasjonalitet: {"(placeholder)"}</ListGroupItem>
+              <ListGroupItem>Kamphistorikk: {athlete?.record}</ListGroupItem>
             </Row>
             <Row>
               <ListGroupItem>
-                Hjemmearena: {"(placeholder)"}{" "}
+                Nasjonalitet: {athlete?.nationality}
+              </ListGroupItem>
+            </Row>
+            <Row>
+              <ListGroupItem>
+                Hjemmearena: {"Arena"}
                 <Link to={`/arena`}>{"(Les mer om arenaer her)"}</Link>
               </ListGroupItem>
             </Row>
