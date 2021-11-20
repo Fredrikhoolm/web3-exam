@@ -27,6 +27,11 @@ const AthleteDetails: FC = () => {
         src={`https://localhost:5001/images/${athlete?.image}`}
         alt={athlete?.image}
       />
+      <h4>{athlete?.age}</h4>
+      <h4>{athlete?.nationality}</h4>
+      <h4>{athlete?.record}</h4>
+      <h4>{athlete?.style}</h4>
+      <h4>{athlete?.division}</h4>
     </>
   );
 };
