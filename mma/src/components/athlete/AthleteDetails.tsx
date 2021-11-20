@@ -1,6 +1,15 @@
 import { FC, useContext, useEffect, useState } from "react";
 import { IAthlete } from "../../interfaces/IAthlete";
-import { Card, Button, Col, Container, Row } from "react-bootstrap";
+import {
+  Card,
+  Button,
+  Col,
+  Container,
+  Row,
+  ListGroupItem,
+  ListGroup,
+  Image,
+} from "react-bootstrap";
 import { Link, useParams } from "react-router-dom";
 import { AthleteContext } from "../../contexts/AthleteContext";
 import { AthleteContextType } from "../../types/AthleteContextType";
@@ -21,18 +30,45 @@ const AthleteDetails: FC = () => {
   }, []);
 
   return (
-    <>
-      <div>{athlete?.name}</div>
-      <img
-        src={`https://localhost:5001/images/${athlete?.image}`}
-        alt={athlete?.image}
-      />
-      <h4>{athlete?.age}</h4>
-      <h4>{athlete?.nationality}</h4>
-      <h4>{athlete?.record}</h4>
-      <h4>{athlete?.style}</h4>
-      <h4>{athlete?.division}</h4>
-    </>
+    <Container>
+      <Row>
+        <Col>
+          <ListGroup>
+            <Row>
+              <h2>{athlete?.name}</h2>
+            </Row>
+            <Row>
+              <ListGroupItem>Alder: {"(placeholder)"}</ListGroupItem>
+            </Row>
+            <Row>
+              <ListGroupItem>Vektklasse: {"(placeholder)"}</ListGroupItem>
+            </Row>
+            <Row>
+              <ListGroupItem>Kampsportstil: {"(placeholder)"}</ListGroupItem>
+            </Row>
+            <Row>
+              <ListGroupItem>Kamphistorikk: {"(placeholder)"}</ListGroupItem>
+            </Row>
+            <Row>
+              <ListGroupItem>Nasjonalitet: {"(placeholder)"}</ListGroupItem>
+            </Row>
+            <Row>
+              <ListGroupItem>
+                Hjemmearena: {"(placeholder)"}{" "}
+                <Link to={`/arena`}>{"(Les mer om arenaer her)"}</Link>
+              </ListGroupItem>
+            </Row>
+          </ListGroup>
+        </Col>
+        <Col>
+          <Image
+            fluid
+            src={`https://localhost:5001/images/${athlete?.image}`}
+            alt={athlete?.image}
+          />
+        </Col>
+      </Row>
+    </Container>
   );
 };
 
