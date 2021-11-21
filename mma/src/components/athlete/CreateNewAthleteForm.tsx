@@ -2,7 +2,7 @@ import { FC, ChangeEvent, useState } from "react";
 import { athleteService } from "../../services/athleteService";
 import { IAthlete } from "../../interfaces/IAthlete";
 import AthleteDetails from "./AthleteDetails";
-import "../../css/CreateNewAthleteForm.css";
+import "../../css/CreateNewForm.css";
 import {
   Col,
   Form,
@@ -97,7 +97,7 @@ const CreateNewAthleteForm: FC = () => {
                 <Form.Control
                   onChange={handleChange}
                   name="age"
-                  type="text"
+                  type="number"
                   placeholder="Skriv inn alder..."
                 />
               </Form.Group>
