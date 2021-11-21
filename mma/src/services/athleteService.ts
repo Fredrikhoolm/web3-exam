@@ -33,11 +33,17 @@ export const athleteService = (function () {
     return result.data as IAthlete[];
   };
 
+  const editAthlete = async (id: string, athletes: IAthlete) => {
+    console.log("edited: " + athletes.name);
+    axios.put(UrlToAthleteController + "/" + id, athletes);
+  }
+
   return {
     getAllAthletes,
     postNewAthlete,
     getOneAthlete,
     deleteAthlete,
+    editAthlete
     
   };
 })();
