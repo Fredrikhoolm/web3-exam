@@ -1,6 +1,7 @@
 import { FC, ChangeEvent, useState } from "react";
 import { athleteService } from "../../services/athleteService";
 import { IAthlete } from "../../interfaces/IAthlete";
+import AthleteDetails from "./AthleteDetails";
 import {
   Col,
   Form,
@@ -129,21 +130,27 @@ const CreateNewAthleteForm: FC = () => {
               </Form.Group>
             </Row>
 
-            <Row></Row>
+            <Row>
+              <Form.Group className="mb-3">
+                <Form.Label>Kampsportstil</Form.Label>
+                <Form.Control
+                  onChange={handleChange}
+                  name="style"
+                  type="text"
+                />
+              </Form.Group>
+            </Row>
 
-            <Form.Group className="mb-3">
-              <Form.Label>Kampsportstil</Form.Label>
-              <Form.Control onChange={handleChange} name="style" type="text" />
-            </Form.Group>
-            <Row></Row>
-            <Form.Group className="mb-3">
-              <Form.Label>Kallenavn</Form.Label>
-              <Form.Control
-                onChange={handleChange}
-                name="nickname"
-                type="text"
-              />
-            </Form.Group>
+            <Row>
+              <Form.Group className="mb-3">
+                <Form.Label>Kallenavn</Form.Label>
+                <Form.Control
+                  onChange={handleChange}
+                  name="nickname"
+                  type="text"
+                />
+              </Form.Group>
+            </Row>
 
             <Form.Group>
               <Form.Label>Velg bilde</Form.Label>
@@ -155,6 +162,9 @@ const CreateNewAthleteForm: FC = () => {
               value="Lagre ny utøver"
             />
           </Form>
+        </Col>
+        <Col>
+          <Container></Container>
         </Col>
       </Row>
     </Container>
