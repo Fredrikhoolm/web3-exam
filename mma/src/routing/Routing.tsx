@@ -9,6 +9,7 @@ import ArenaDetailsPage from "../pages/ArenaDetailsPage";
 import AllArena from "../pages/AllArena";
 import CreateNewArena from "../pages/CreateNewArena";
 import CreateNewAthlete from "../pages/CreateNewAthlete";
+import EditAthletePage from "../pages/EditAthletePage";
 
 const Routing: FC = () => {
   return (
@@ -25,10 +26,12 @@ const Routing: FC = () => {
           <Route path="/create-athlete" element={<CreateNewAthlete />}></Route>
         </Routes>
         <Routes>
-          <Route
-            path="/athletes-details/:id"
-            element={<AthleteDetailsPage />}
-          ></Route>
+          <Route path="/athletes-details/:id" element={<AthleteDetailsPage />}
+        ></Route>
+        </Routes>
+        <Routes>
+          <Route path="/edit-athlete/:id" element={<EditAthletePage />}
+        ></Route>
         </Routes>
         <Routes>
           <Route path="/arena" element={<AllArena />}></Route>
