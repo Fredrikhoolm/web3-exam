@@ -31,8 +31,8 @@ const AthleteDetails: FC = () => {
   }, []);
 
   const deleteAthlete = () => {
-    return athleteService.deleteAthlete(id)
-  }
+    return athleteService.deleteAthlete(id);
+  };
 
   return (
     <Container>
@@ -40,32 +40,41 @@ const AthleteDetails: FC = () => {
         <Col>
           <ListGroup>
             <Row>
-              <h2>{athlete?.name}</h2>
-            </Row>
-            <Row>
-              <h5>"{athlete?.nickname}"</h5>
-            </Row>
-            <Row>
-              <ListGroupItem>Alder: {athlete?.age}</ListGroupItem>
-            </Row>
-            <Row>
-              <ListGroupItem>Vektklasse: {athlete?.division}</ListGroupItem>
-            </Row>
-            <Row>
-              <ListGroupItem>Kampsportstil: {athlete?.style}</ListGroupItem>
-            </Row>
-            <Row>
-              <ListGroupItem>Kamphistorikk: {athlete?.record}</ListGroupItem>
-            </Row>
-            <Row>
               <ListGroupItem>
+                <h2 className="text-center mt-2">{athlete?.name}</h2>
+                <h5 className="text-center mb-3">"{athlete?.nickname}"</h5>
+              </ListGroupItem>
+            </Row>
+
+            <Row>
+              <ListGroupItem className="fs-5">
+                Alder: {athlete?.age}
+              </ListGroupItem>
+            </Row>
+            <Row>
+              <ListGroupItem className="fs-5">
+                Vektklasse: {athlete?.division}
+              </ListGroupItem>
+            </Row>
+            <Row>
+              <ListGroupItem className="fs-5">
+                Kampsportstil: {athlete?.style}
+              </ListGroupItem>
+            </Row>
+            <Row>
+              <ListGroupItem className="fs-5">
+                Kamphistorikk: {athlete?.record}
+              </ListGroupItem>
+            </Row>
+            <Row>
+              <ListGroupItem className="fs-5">
                 Nasjonalitet: {athlete?.nationality}
               </ListGroupItem>
             </Row>
             <Row>
-              <ListGroupItem>
-                Hjemmearena: {"Arena"}
-                <Link to={`/arena`}>{"(Les mer om arenaer her)"}</Link>
+              <ListGroupItem className="fs-5">
+                Hjemme
+                <Link to={`/arena`}>arena:</Link> {"Arena"}
               </ListGroupItem>
             </Row>
           </ListGroup>
@@ -78,15 +87,42 @@ const AthleteDetails: FC = () => {
           />
         </Col>
       </Row>
-      <Col>
-      <Row>
-        <Link to={`/athletes`}><Button onClick={deleteAthlete}>Slett utøver</Button></Link>
-        <Link to={`/athletes`}><Button variant="primary"> Tilbake </Button></Link>
-      </Row>
-      <Row>
-        <Link to={`/edit-athlete/${id}`}><Button variant="primary">Endre utøver</Button></Link>
-      </Row>
-      </Col>
+      <Container className="mt-5 mb-5">
+        <Row>
+          <Col>
+            <Link
+              className="d-grid gap-2 text-decoration-none"
+              to={`/athletes`}
+            >
+              <Button variant="outline-dark" size="lg">
+                {" "}
+                Tilbake{" "}
+              </Button>
+            </Link>
+          </Col>
+
+          <Col>
+            <Link
+              className="d-grid gap-2 text-decoration-none"
+              to={`/athletes`}
+            >
+              <Button variant="outline-dark" size="lg" onClick={deleteAthlete}>
+                Slett utøver
+              </Button>
+            </Link>
+          </Col>
+          <Col>
+            <Link
+              className="d-grid gap-2 text-decoration-none"
+              to={`/edit-athlete/${id}`}
+            >
+              <Button variant="outline-dark" size="lg">
+                Endre utøver
+              </Button>
+            </Link>
+          </Col>
+        </Row>
+      </Container>
     </Container>
   );
 };
