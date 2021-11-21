@@ -6,7 +6,7 @@ import logo from "../../assets/images/backyard-brawl.png";
 
 const MainNavigation: FC = () => {
   return (
-    <Navbar bg="dark" variant="dark">
+    <Navbar className="navbar shadow navbar-expand-lg navbar-black bg-light">
       <Container>
         <Navbar.Brand>Backyard Brawl</Navbar.Brand>
         <Navbar.Brand>
