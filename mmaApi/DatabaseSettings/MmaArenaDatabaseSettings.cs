@@ -1,4 +1,4 @@
-namespace MmaAthletesApi.DatabaseSettings
+namespace MmaArenasApi.DatabaseSettings
 {
     public class MmaArenaDatabaseSettings: IMmaArenaDatabaseSettings
     {

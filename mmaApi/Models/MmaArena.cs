@@ -1,8 +1,8 @@
 using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
-using MmaAthletesApi.Interfaces;
+using MmaArenaApi.Interfaces;
 
-namespace MmaAthletesApi.Models
+namespace MmaArenaApi.Models
 {
     public class MmaArena : IMmaArena
     {
@@ -13,7 +13,6 @@ namespace MmaAthletesApi.Models
         [BsonElement("Name")]
         public string Name {get; set;}
         public string Image {get; set;}
-
         public string Capacity {get; set;}
     }
 }

@@ -1,16 +1,16 @@
 import { FC, useContext, useEffect, useState } from "react";
 import { useParams } from "react-router";
-import AthleteDetails from "../components/athlete/AthleteDetails";
+import ArenaDetails from "../components/arena/ArenaDetails";
 import AthleteItem from "../components/athlete/AthleteItem";
 import { IAthlete } from "../interfaces/IAthlete";
 
-const AthleteDetailsPage: FC = () => {
+const ArenaDetailsPage: FC = () => {
   return (
     <section>
-      <h3>Generell informasjon</h3>
-      <AthleteDetails />
+      <h3>Arena informasjon</h3>
+      <ArenaDetails />
     </section>
   );
 };
 
-export default AthleteDetailsPage;
+export default ArenaDetailsPage;

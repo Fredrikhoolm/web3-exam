@@ -12,8 +12,10 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
 using MmaAthletesApi.DatabaseSettings;
+using MmaArenasApi.DatabaseSettings;
 using MmaAthletesApi.Models;
 using MmaAthletesApi.Services;
+using MmaArenasApi.Services;
 using Microsoft.Extensions.Options;
 
 namespace MmaAthletesApi

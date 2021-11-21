@@ -15,8 +15,8 @@ const AthleteList: FC = () => {
           <AthleteItem
             id={athlete.id}
             name={athlete.name}
-            image={athlete.image}
-          />
+            // eslint-disable-next-line react/style-prop-object
+            image={athlete.image} age={""} nationality={""} record={""} style={""} division={""} nickname={athlete.nickname}          />
         </Col>
       );
     });

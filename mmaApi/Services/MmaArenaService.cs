@@ -1,10 +1,10 @@
-using MmaAthletesApi.Models;
-using MmaAthletesApi.DatabaseSettings;
+using MmaArenaApi.Models;
+using MmaArenasApi.DatabaseSettings;
 using MongoDB.Driver;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace MmaAthletesApi.Services
+namespace MmaArenasApi.Services
 {
     public class MmaArenaService
     {
@@ -25,12 +25,21 @@ namespace MmaAthletesApi.Services
         public MmaArena Get(string id) =>
             _mmaArenas.Find<MmaArena>(mmaArena => mmaArena.Id == id).FirstOrDefault();
 
-
         public MmaArena Create(MmaArena newMmaArena)
         {
             _mmaArenas.InsertOne(newMmaArena);
             return newMmaArena;
         }
 
+        public void Update(string id, MmaArena mmaArenaIn) =>
+            _mmaArenas.ReplaceOne(mmaArena => mmaArena.Id == id, mmaArenaIn);
+        
+        public void Remove(MmaArena mmaArenaIn) =>
+        _mmaArenas.DeleteOne(mmaArena => mmaArena.Id == mmaArenaIn.Id);
+
+        public void Remove(string id) =>
+        _mmaArenas.DeleteOne(mmaArena => mmaArena.Id == id);
     }
+
+    
 }
