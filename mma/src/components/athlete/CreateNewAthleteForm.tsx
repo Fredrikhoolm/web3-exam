@@ -1,53 +1,134 @@
 import { FC, ChangeEvent, useState } from "react";
 import { athleteService } from "../../services/athleteService";
 import { IAthlete } from "../../interfaces/IAthlete";
+import {
+  Col,
+  Form,
+  ListGroup,
+  ListGroupItem,
+  Container,
+  Row,
+} from "react-bootstrap";
 
-const CreateNewAthleteForm : FC = () => {   
+const CreateNewAthleteForm: FC = () => {
+  const [newAthlete, setNewAthlete] = useState<IAthlete>({
+    name: "",
+    image: "",
+    age: "",
+    nationality: "",
+    record: "",
+    style: "",
+    division: "",
+    nickname: "",
+  });
+  const [newImage, setNewImage] = useState<File>();
 
-    const [ newAthlete, setNewAthlete ] = useState<IAthlete>({name: "", image: "", age: "", nationality: "", record: "", style: "", division: "", nickname: ""});
-    const [ newImage, setNewImage ] = useState<File>();
+  const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
+    let { name } = event.target;
+    let { value } = event.target;
+    switch (name) {
+      case "name":
+        setNewAthlete({ ...newAthlete, name: value });
 
-    const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
-        let { name } = event.target;        
-        switch( name ){
-            case "name":
-                let { value } = event.target;
-                setNewAthlete( { ...newAthlete, name: value } );
-                break;
-            case "image":
-                let { files } = event.target;
-                if( files ){
-                    console.log( files[0] );
-                    setNewAthlete( { ...newAthlete, image: files[0].name } );
-                    setNewImage( files[0] );
-                }
-            break;
+        break;
+      case "image":
+        let { files } = event.target;
+        if (files) {
+          console.log(files[0]);
+          setNewAthlete({ ...newAthlete, image: files[0].name });
+          setNewImage(files[0]);
         }
-    }
-    const postNewAthlete = () => {
-        console.log( newAthlete );
-        console.log( newImage ); 
-        athleteService.postNewAthlete(newAthlete, newImage as File);
-    }
 
-    
-    return (
-        <section>
-            <div>
-                <label>Navn</label>
-                <input onChange={handleChange} name="name" type="text"/>
-            </div>
-            <div>
-                <label>Alder</label>
-                <input onChange={handleChange} name="age" type="text"/>
-            </div>
-            <div>
-                <label>Velg bilde</label>
-                <input onChange={handleChange} name="image" type="file"/>
-            </div>
-            <input onClick={postNewAthlete} type="button" value="Lagre ny utøver"/>
-        </section>
-    )
-}
+        break;
+      case "age":
+        setNewAthlete({ ...newAthlete, age: value });
+        break;
+
+      case "nationality":
+        setNewAthlete({ ...newAthlete, nationality: value });
+        break;
+
+      case "record":
+        setNewAthlete({ ...newAthlete, record: value });
+        break;
+
+      case "style":
+        setNewAthlete({ ...newAthlete, style: value });
+        break;
+
+      case "division":
+        setNewAthlete({ ...newAthlete, division: value });
+        break;
+
+      case "nickname":
+        setNewAthlete({ ...newAthlete, nickname: value });
+        break;
+    }
+  };
+  const postNewAthlete = () => {
+    console.log(newAthlete);
+    console.log(newImage);
+    athleteService.postNewAthlete(newAthlete, newImage as File);
+  };
+
+  return (
+    <Form>
+      <Col>
+        <Row>
+          <Form.Group className="mb-3">
+            <Form.Label>Navn</Form.Label>
+            <Form.Control
+              onChange={handleChange}
+              name="name"
+              type="text"
+              placeholder="Skriv inn navn..."
+            />
+          </Form.Group>
+
+          <Form.Group className="mb-3">
+            <Form.Label>Alder</Form.Label>
+            <Form.Control onChange={handleChange} name="age" type="text" />
+          </Form.Group>
+          <Form.Group className="mb-3">
+            <Form.Label>Nasjonalitet</Form.Label>
+            <Form.Control
+              onChange={handleChange}
+              name="nationality"
+              type="text"
+            />
+          </Form.Group>
+          <Form.Group className="mb-3">
+            <Form.Label>Kamphistorikk</Form.Label>
+            <Form.Control onChange={handleChange} name="record" type="text" />
+          </Form.Group>
+          <Form.Group className="mb-3">
+            <Form.Label>Vektklasse</Form.Label>
+            <Form.Control onChange={handleChange} name="division" type="text" />
+          </Form.Group>
+          <Form.Group className="mb-3">
+            <Form.Label>Kampsportstil</Form.Label>
+            <Form.Control onChange={handleChange} name="style" type="text" />
+          </Form.Group>
+          <Form.Group className="mb-3">
+            <Form.Label>Kallenavn</Form.Label>
+            <Form.Control onChange={handleChange} name="nickname" type="text" />
+          </Form.Group>
+          <Form.Group>
+            <Form.Label>Velg bilde</Form.Label>
+            <Form.Control onChange={handleChange} name="image" type="file" />
+          </Form.Group>
+          <input
+            onClick={postNewAthlete}
+            type="button"
+            value="Lagre ny utøver"
+          />
+        </Row>
+      </Col>
+      <Col>
+        <Container fluid>hello</Container>
+      </Col>
+    </Form>
+  );
+};
 
 export default CreateNewAthleteForm;
