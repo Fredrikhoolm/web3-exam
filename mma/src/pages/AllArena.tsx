@@ -1,6 +1,7 @@
 import { FC } from "react";
 import ArenaList from "../components/arena/ArenaList";
 import { ArenaProvider } from "../contexts/ArenaContext";
+import { Link } from "react-router-dom"
 
 
 const AllArena: FC = () => {
@@ -8,12 +9,9 @@ const AllArena: FC = () => {
     <section>
       <h3>Alle Arenaer</h3>
       <div className="container">
-        <input
-          type="search"
-          value="Søk etter arena"
-          className="input"
-          placeholder="Filter"
-        ></input>
+      <div>
+        <Link to="/create-arena"><button>Legg til ny Arena</button></Link>
+      </div>
       </div>
       <ArenaProvider>
         <ArenaList />

@@ -5,7 +5,9 @@ import AllAthlete from "../pages/AllAthlete";
 import MainNavigation from "../components/shared/MainNavigation";
 import Home from "../pages/Home";
 import AthleteDetailsPage from "../pages/AthleteDetailsPage";
+import ArenaDetailsPage from "../pages/ArenaDetailsPage";
 import AllArena from "../pages/AllArena";
+import CreateNewArena from "../pages/CreateNewArena";
 import CreateNewAthlete from "../pages/CreateNewAthlete";
 
 const Routing: FC = () => {
@@ -23,13 +25,20 @@ const Routing: FC = () => {
           <Route path="/create-athlete" element={<CreateNewAthlete />}></Route>
         </Routes>
         <Routes>
-          <Route
-            path="/athletes-details/:id"
-            element={<AthleteDetailsPage />}
+          <Route path="/athletes-details/:id" element={<AthleteDetailsPage />}
           ></Route>
         </Routes>
         <Routes>
           <Route path="/arena" element={<AllArena />}></Route>
+        </Routes>
+        <Routes>
+          <Route
+            path="/arena-details/:id"
+            element={<ArenaDetailsPage />}
+          ></Route>
+          </Routes>
+          <Routes>
+          <Route path="/create-arena" element={<CreateNewArena />}></Route>
         </Routes>
       </Container>
     </BrowserRouter>
