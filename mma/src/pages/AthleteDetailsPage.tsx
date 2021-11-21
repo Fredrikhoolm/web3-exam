@@ -7,7 +7,7 @@ import { IAthlete } from "../interfaces/IAthlete";
 const AthleteDetailsPage: FC = () => {
   return (
     <section>
-      <h3>Generell informasjon</h3>
+      <h3 className="text-center mt-5 mb-5 fs-1">Generell informasjon</h3>
       <AthleteDetails />
     </section>
   );
