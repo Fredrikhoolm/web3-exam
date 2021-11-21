@@ -28,10 +28,16 @@ export const athleteService = (function () {
     return result.data
   }
 
+  const deleteAthlete = async (id: any) => {
+    const result = await axios.delete(`${UrlToAthleteController}/${id}`)
+    return result.data as IAthlete[];
+  };
+
   return {
     getAllAthletes,
     postNewAthlete,
-    getOneAthlete
+    getOneAthlete,
+    deleteAthlete,
     
   };
 })();

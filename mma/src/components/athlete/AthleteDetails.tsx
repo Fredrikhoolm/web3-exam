@@ -15,6 +15,7 @@ import { AthleteContext } from "../../contexts/AthleteContext";
 import { AthleteContextType } from "../../types/AthleteContextType";
 import AthleteItem from "./AthleteItem";
 import AthleteList from "./AthleteList";
+import { athleteService } from "../../services/athleteService";
 
 const AthleteDetails: FC = () => {
   const { id } = useParams();
@@ -28,6 +29,10 @@ const AthleteDetails: FC = () => {
       setAthlete(_athlete);
     }
   }, []);
+
+  const deleteAthlete = () => {
+    return athleteService.deleteAthlete(id)
+  }
 
   return (
     <Container>
@@ -73,6 +78,11 @@ const AthleteDetails: FC = () => {
           />
         </Col>
       </Row>
+      <Col>
+      <Row>
+        <Button onClick={deleteAthlete}>Slett utøver</Button>
+      </Row>
+      </Col>
     </Container>
   );
 };
