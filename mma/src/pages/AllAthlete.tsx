@@ -10,6 +10,9 @@ const AllAthlete: FC = () => {
         <Link to="/create-athlete"><button>Legg til ny utøver</button></Link>
       </div>
       <AthleteList />
+      <div>
+        <Link to="/create-athlete"><button>Legg til ny utøver</button></Link>
+      </div>
     </section>
   );
 };

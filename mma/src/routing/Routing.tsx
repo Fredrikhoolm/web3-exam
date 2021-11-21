@@ -25,7 +25,9 @@ const Routing: FC = () => {
           <Route path="/create-athlete" element={<CreateNewAthlete />}></Route>
         </Routes>
         <Routes>
-          <Route path="/athletes-details/:id" element={<AthleteDetailsPage />}
+          <Route
+            path="/athletes-details/:id"
+            element={<AthleteDetailsPage />}
           ></Route>
         </Routes>
         <Routes>
