@@ -8,13 +8,12 @@ const CreateNewArenaForm : FC = () => {
     const [ newImage, setNewImage ] = useState<File>();
 
     const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
-        let { name } = event.target;        
+        let { name } = event.target;       
         switch( name ){
             case "name":
                 let { value } = event.target;
                 setNewArena( { ...newArena, name: value } );
                 break;
-                
             case "image":
                 let { files } = event.target;
                 if( files ){
@@ -23,11 +22,9 @@ const CreateNewArenaForm : FC = () => {
                     setNewImage( files[0] );
                 }
             break;
-
-            
         }
     }
-    const postNewAthlete = () => {
+    const postNewArena = () => {
         console.log( newArena );
         console.log( newImage ); 
         arenaService.postNewArena(newArena, newImage as File);
@@ -41,10 +38,14 @@ const CreateNewArenaForm : FC = () => {
                 <input onChange={handleChange} name="name" type="text"/>
             </div>
             <div>
+                <label>Kapasitet</label>
+                <input onChange={handleChange} name="capacity" type="text"/>
+            </div>
+            <div>
                 <label>Velg bilde</label>
                 <input onChange={handleChange} name="image" type="file"/>
             </div>
-            <input onClick={postNewAthlete} type="button" value="Lagre ny utøver"/>
+            <input onClick={postNewArena} type="button" value="Lagre ny arena"/>
         </section>
     )
 }

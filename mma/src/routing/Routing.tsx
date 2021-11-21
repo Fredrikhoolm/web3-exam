@@ -33,8 +33,7 @@ const Routing: FC = () => {
         </Routes>
         <Routes>
           <Route
-            path="/arena-details/:id"
-            element={<ArenaDetailsPage />}
+            path="/arena-details/:id" element={<ArenaDetailsPage />}
           ></Route>
           </Routes>
           <Routes>
