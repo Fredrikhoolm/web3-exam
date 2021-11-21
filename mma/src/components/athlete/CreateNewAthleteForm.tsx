@@ -2,6 +2,7 @@ import { FC, ChangeEvent, useState } from "react";
 import { athleteService } from "../../services/athleteService";
 import { IAthlete } from "../../interfaces/IAthlete";
 import AthleteDetails from "./AthleteDetails";
+import "../../css/CreateNewAthleteForm.css";
 import {
   Col,
   Form,
@@ -93,7 +94,12 @@ const CreateNewAthleteForm: FC = () => {
             <Row>
               <Form.Group className="mb-3">
                 <Form.Label>Alder</Form.Label>
-                <Form.Control onChange={handleChange} name="age" type="text" />
+                <Form.Control
+                  onChange={handleChange}
+                  name="age"
+                  type="text"
+                  placeholder="Skriv inn alder..."
+                />
               </Form.Group>
             </Row>
 
@@ -104,6 +110,7 @@ const CreateNewAthleteForm: FC = () => {
                   onChange={handleChange}
                   name="nationality"
                   type="text"
+                  placeholder="Skriv inn nasjonalitet..."
                 />
               </Form.Group>
             </Row>
@@ -115,6 +122,7 @@ const CreateNewAthleteForm: FC = () => {
                   onChange={handleChange}
                   name="record"
                   type="text"
+                  placeholder="Skriv inn kamphistorikk..."
                 />
               </Form.Group>
             </Row>
@@ -126,6 +134,7 @@ const CreateNewAthleteForm: FC = () => {
                   onChange={handleChange}
                   name="division"
                   type="text"
+                  placeholder="Skriv inn vektklasse..."
                 />
               </Form.Group>
             </Row>
@@ -137,6 +146,7 @@ const CreateNewAthleteForm: FC = () => {
                   onChange={handleChange}
                   name="style"
                   type="text"
+                  placeholder="Skriv inn kampsportstil..."
                 />
               </Form.Group>
             </Row>
@@ -148,14 +158,11 @@ const CreateNewAthleteForm: FC = () => {
                   onChange={handleChange}
                   name="nickname"
                   type="text"
+                  placeholder="Skriv inn kallenavn..."
                 />
               </Form.Group>
             </Row>
 
-            <Form.Group>
-              <Form.Label>Velg bilde</Form.Label>
-              <Form.Control onChange={handleChange} name="image" type="file" />
-            </Form.Group>
             <input
               onClick={postNewAthlete}
               type="button"
@@ -164,7 +171,13 @@ const CreateNewAthleteForm: FC = () => {
           </Form>
         </Col>
         <Col>
-          <Container></Container>
+          <Container fluid className="ImgPlaceholder">
+            Placeholder Image
+          </Container>
+          <Form.Group>
+            <Form.Label>Velg bilde</Form.Label>
+            <Form.Control onChange={handleChange} name="image" type="file" />
+          </Form.Group>
         </Col>
       </Row>
     </Container>
