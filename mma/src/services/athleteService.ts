@@ -2,6 +2,7 @@ import axios from "axios";
 import { IAthlete } from "../interfaces/IAthlete";
 
 export const athleteService = (function () {
+
   const UrlToAthleteController = "https://localhost:5001/MmaAthlete";
   const urlToImageUploadController = "https://localhost:5001/ImageUpload/SaveImage";
 
@@ -29,7 +30,8 @@ export const athleteService = (function () {
 
   return {
     getAllAthletes,
-    getOneAthlete,
-    postNewAthlete
+    postNewAthlete,
+    getOneAthlete
+    
   };
 })();

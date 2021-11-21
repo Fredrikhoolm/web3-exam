@@ -6,6 +6,7 @@ import { AthleteContext } from "../../contexts/AthleteContext";
 import { AthleteContextType } from "../../types/AthleteContextType";
 
 const AthleteList: FC = () => {
+
   const { athletes } = useContext(AthleteContext) as AthleteContextType;
 
   const createAthleteList = () => {

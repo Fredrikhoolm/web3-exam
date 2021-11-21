@@ -4971,19 +4971,19 @@
     ]
   },
   "packageFolders": {
-    "/Users/johann/.nuget/packages/": {}
+    "/Users/fredrikholm/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/johann/Desktop/Webutvikling3/web3-exam/mmaApi/MmaAthletesApi.csproj",
+      "projectUniqueName": "/Users/fredrikholm/Desktop/web3/web3-exam/mmaApi/MmaAthletesApi.csproj",
       "projectName": "MmaAthletesApi",
-      "projectPath": "/Users/johann/Desktop/Webutvikling3/web3-exam/mmaApi/MmaAthletesApi.csproj",
-      "packagesPath": "/Users/johann/.nuget/packages/",
-      "outputPath": "/Users/johann/Desktop/Webutvikling3/web3-exam/mmaApi/obj/",
+      "projectPath": "/Users/fredrikholm/Desktop/web3/web3-exam/mmaApi/MmaAthletesApi.csproj",
+      "packagesPath": "/Users/fredrikholm/.nuget/packages/",
+      "outputPath": "/Users/fredrikholm/Desktop/web3/web3-exam/mmaApi/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/johann/.nuget/NuGet/NuGet.Config"
+        "/Users/fredrikholm/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net5.0"
@@ -5034,7 +5034,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.402/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.403/RuntimeIdentifierGraph.json"
       }
     }
   }

@@ -1,8 +1,9 @@
 import { FC, ChangeEvent, useState } from "react";
 import { arenaService } from "../../services/arenaService";
 import { IArena } from "../../interfaces/IArena";
-import { Row, Form, Container, Col } from "react-bootstrap";
+import { Row, Form, Container, Col, Button } from "react-bootstrap";
 import "../../css/CreateNewForm.css";
+import { Link } from "react-router-dom"
 
 const CreateNewArenaForm: FC = () => {
   const [newArena, setNewArena] = useState<IArena>({
@@ -67,11 +68,8 @@ const CreateNewArenaForm: FC = () => {
                 />
               </Form.Group>
             </Row>
-            <input
-              onClick={postNewArena}
-              type="button"
-              value="Lagre ny arena"
-            />
+            <Link to={`/arena`}><Button variant="primary" 
+          onClick={postNewArena}> Lagre arena </Button></Link>
           </Form>
         </Col>
         <Col>

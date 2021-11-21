@@ -3,14 +3,8 @@ import { athleteService } from "../../services/athleteService";
 import { IAthlete } from "../../interfaces/IAthlete";
 import AthleteDetails from "./AthleteDetails";
 import "../../css/CreateNewForm.css";
-import {
-  Col,
-  Form,
-  ListGroup,
-  ListGroupItem,
-  Container,
-  Row,
-} from "react-bootstrap";
+import { Col, Form, ListGroup, ListGroupItem, Container, Row, Button } from "react-bootstrap";
+import { Link } from "react-router-dom"
 
 const CreateNewAthleteForm: FC = () => {
   const [newAthlete, setNewAthlete] = useState<IAthlete>({
@@ -162,12 +156,8 @@ const CreateNewAthleteForm: FC = () => {
                 />
               </Form.Group>
             </Row>
-
-            <input
-              onClick={postNewAthlete}
-              type="button"
-              value="Lagre ny utøver"
-            />
+          <Link to={`/athletes`}><Button variant="primary" 
+          onClick={postNewAthlete}> Lagre utøver </Button></Link>
           </Form>
         </Col>
         <Col>

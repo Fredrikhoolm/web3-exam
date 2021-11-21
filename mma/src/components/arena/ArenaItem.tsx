@@ -16,7 +16,6 @@ const ArenaItem: FC<IArena> = ({ id, name, image, capacity }) => {
         <Card.Text>
           <p>Kapasitet: {capacity} </p>
         </Card.Text>
-        <Link to={`/arena-details/${id}`}><Button variant="primary">Les mer om {name}</Button></Link>
       </Card.Body>
     </Card>
   );
