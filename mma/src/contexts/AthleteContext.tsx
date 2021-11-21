@@ -9,7 +9,7 @@ export const AthleteProvider: FC = ({ children }) => {
 
   useEffect(() => {
     getAthletes();
-  }, []);
+  }, [athletes]);
 
   const getAthletes = async () => {
     const result = await athleteService.getAllAthletes();

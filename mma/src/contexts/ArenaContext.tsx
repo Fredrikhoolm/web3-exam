@@ -9,7 +9,7 @@ export const ArenaProvider: FC = ({ children }) => {
 
   useEffect(() => {
     getArenas();
-  }, []);
+  }, [arenas]);
 
   const getArenas = async () => {
     const result = await arenaService.getAllArenas();
