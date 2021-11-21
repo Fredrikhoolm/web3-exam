@@ -3,7 +3,7 @@ import { arenaService } from "../../services/arenaService";
 import { IArena } from "../../interfaces/IArena";
 import { Row, Form, Container, Col, Button } from "react-bootstrap";
 import "../../css/CreateNewForm.css";
-import { Link } from "react-router-dom"
+import { Link } from "react-router-dom";
 
 const CreateNewArenaForm: FC = () => {
   const [newArena, setNewArena] = useState<IArena>({
@@ -41,47 +41,69 @@ const CreateNewArenaForm: FC = () => {
 
   return (
     <Container>
+      <Form>
+        <Row>
+          <Col>
+            {" "}
+            <Form.Group className="mb-3">
+              <Form.Label>
+                <h5>Navn</h5>
+              </Form.Label>
+              <Form.Control
+                onChange={handleChange}
+                name="name"
+                type="text"
+                placeholder="Skriv inn navn..."
+              />
+            </Form.Group>
+          </Col>
+
+          <Col>
+            <Form.Group className="mb-3">
+              <Form.Label>
+                <h5>Kapasitet</h5>
+              </Form.Label>
+              <Form.Control
+                onChange={handleChange}
+                name="capacity"
+                type="number"
+                placeholder="Skriv inn kapasitet..."
+              />
+            </Form.Group>
+          </Col>
+        </Row>
+      </Form>
+
+      <Form.Group>
+        <Form.Label>Last opp bilde</Form.Label>
+        <Form.Control
+          onChange={handleChange}
+          name="image"
+          type="file"
+          size="lg"
+        />
+      </Form.Group>
+
       <Row>
         <Col>
-          <Form>
-            <Row>
-              {" "}
-              <Form.Group className="mb-3">
-                <Form.Label>Navn</Form.Label>
-                <Form.Control
-                  onChange={handleChange}
-                  name="name"
-                  type="text"
-                  placeholder="Skriv inn navn..."
-                />
-              </Form.Group>
-            </Row>
-
-            <Row>
-              <Form.Group className="mb-3">
-                <Form.Label>Kapasitet</Form.Label>
-                <Form.Control
-                  onChange={handleChange}
-                  name="capacity"
-                  type="number"
-                  placeholder="Skriv inn kapasitet..."
-                />
-              </Form.Group>
-            </Row>
-            <Link to={`/arena`}><Button variant="primary" 
-          onClick={postNewArena}> Lagre arena </Button></Link>
-          <Link to={`/arena`}><Button variant="primary" 
-          > Tilbake </Button></Link>
-          </Form>
+          <Container className="mt-5">
+            <Link className="d-grid gap-2 text-decoration-none" to={`/arena`}>
+              <Button size="lg" variant="outline-dark" onClick={postNewArena}>
+                {" "}
+                Lagre arena{" "}
+              </Button>
+            </Link>
+          </Container>
         </Col>
         <Col>
-          <Container fluid className="ImgPlaceholderArena">
-            Placeholder Image
+          <Container className="mt-5">
+            <Link className="d-grid gap-2 text-decoration-none" to={`/arena`}>
+              <Button size="lg" variant="outline-dark">
+                {" "}
+                Tilbake{" "}
+              </Button>
+            </Link>
           </Container>
-          <Form.Group>
-            <Form.Label>Velg bilde</Form.Label>
-            <Form.Control onChange={handleChange} name="image" type="file" />
-          </Form.Group>
         </Col>
       </Row>
     </Container>
