@@ -158,6 +158,8 @@ const CreateNewAthleteForm: FC = () => {
             </Row>
           <Link to={`/athletes`}><Button variant="primary" 
           onClick={postNewAthlete}> Lagre utøver </Button></Link>
+           <Link to={`/athletes`}><Button variant="primary" 
+          > Tilbake </Button></Link>
           </Form>
         </Col>
         <Col>

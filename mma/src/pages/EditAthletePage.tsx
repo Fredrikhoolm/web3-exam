@@ -1,5 +1,5 @@
 import { FC } from "react";
-import CreateNewAthleteForm from "../components/athlete/CreateNewAthleteForm";
+import EditAthleteForm from "../components/athlete/CreateNewAthleteForm";
 
 const EditAthletePage : FC = () => {
     return (

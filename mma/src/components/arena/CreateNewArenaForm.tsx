@@ -70,6 +70,8 @@ const CreateNewArenaForm: FC = () => {
             </Row>
             <Link to={`/arena`}><Button variant="primary" 
           onClick={postNewArena}> Lagre arena </Button></Link>
+          <Link to={`/arena`}><Button variant="primary" 
+          > Tilbake </Button></Link>
           </Form>
         </Col>
         <Col>
