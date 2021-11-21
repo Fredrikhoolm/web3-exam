@@ -1,0 +1,23 @@
+#athlete-name{
+    font-weight: bold;
+    font-size: 25px;
+    color: black;
+}
+
+#athlete-divison{
+    font-size: 18px;
+    color: gray;
+}
+
+#athlete-nickname{
+    font-size: 20px;
+    font-style: italic;
+}
+
+.card:hover{
+    transform: scale(1.1);
+}
+
+.card{
+    transition: transform 0.2s ease;
+}

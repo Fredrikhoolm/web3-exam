@@ -81,6 +81,7 @@ const AthleteDetails: FC = () => {
       <Col>
       <Row>
         <Link to={`/athletes`}><Button onClick={deleteAthlete}>Slett utøver</Button></Link>
+        <Link to={`/athletes`}><Button variant="primary"> Tilbake </Button></Link>
       </Row>
       <Row>
         <Link to={`/edit-athlete/${id}`}><Button variant="primary">Endre utøver</Button></Link>

@@ -6,9 +6,9 @@ import { Button } from "react-bootstrap"
 const AllAthlete: FC = () => {
   return (
     <section>
-      <h3>Alle MMA utøvere</h3>
+      <h3 id=""className="text-center">Alle MMA utøvere</h3>
       <div>
-      <Link to={`/create-athlete`}><Button variant="primary"> Legg til Arena </Button></Link>
+      <Link to={`/create-athlete`}><Button variant="primary"> Legg til utøvere</Button></Link>
       </div>
       <AthleteList />
     </section>
