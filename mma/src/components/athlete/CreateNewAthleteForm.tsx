@@ -72,62 +72,92 @@ const CreateNewAthleteForm: FC = () => {
   };
 
   return (
-    <Form>
-      <Col>
-        <Row>
-          <Form.Group className="mb-3">
-            <Form.Label>Navn</Form.Label>
-            <Form.Control
-              onChange={handleChange}
-              name="name"
-              type="text"
-              placeholder="Skriv inn navn..."
-            />
-          </Form.Group>
+    <Container>
+      <Row>
+        <Col>
+          <Form>
+            <Row>
+              {" "}
+              <Form.Group className="mb-3">
+                <Form.Label>Navn</Form.Label>
+                <Form.Control
+                  onChange={handleChange}
+                  name="name"
+                  type="text"
+                  placeholder="Skriv inn navn..."
+                />
+              </Form.Group>
+            </Row>
 
-          <Form.Group className="mb-3">
-            <Form.Label>Alder</Form.Label>
-            <Form.Control onChange={handleChange} name="age" type="text" />
-          </Form.Group>
-          <Form.Group className="mb-3">
-            <Form.Label>Nasjonalitet</Form.Label>
-            <Form.Control
-              onChange={handleChange}
-              name="nationality"
-              type="text"
+            <Row>
+              <Form.Group className="mb-3">
+                <Form.Label>Alder</Form.Label>
+                <Form.Control onChange={handleChange} name="age" type="text" />
+              </Form.Group>
+            </Row>
+
+            <Row>
+              <Form.Group className="mb-3">
+                <Form.Label>Nasjonalitet</Form.Label>
+                <Form.Control
+                  onChange={handleChange}
+                  name="nationality"
+                  type="text"
+                />
+              </Form.Group>
+            </Row>
+
+            <Row>
+              <Form.Group className="mb-3">
+                <Form.Label>Kamphistorikk</Form.Label>
+                <Form.Control
+                  onChange={handleChange}
+                  name="record"
+                  type="text"
+                />
+              </Form.Group>
+            </Row>
+
+            <Row>
+              <Form.Group className="mb-3">
+                <Form.Label>Vektklasse</Form.Label>
+                <Form.Control
+                  onChange={handleChange}
+                  name="division"
+                  type="text"
+                />
+              </Form.Group>
+            </Row>
+
+            <Row></Row>
+
+            <Form.Group className="mb-3">
+              <Form.Label>Kampsportstil</Form.Label>
+              <Form.Control onChange={handleChange} name="style" type="text" />
+            </Form.Group>
+            <Row></Row>
+            <Form.Group className="mb-3">
+              <Form.Label>Kallenavn</Form.Label>
+              <Form.Control
+                onChange={handleChange}
+                name="nickname"
+                type="text"
+              />
+            </Form.Group>
+
+            <Form.Group>
+              <Form.Label>Velg bilde</Form.Label>
+              <Form.Control onChange={handleChange} name="image" type="file" />
+            </Form.Group>
+            <input
+              onClick={postNewAthlete}
+              type="button"
+              value="Lagre ny utøver"
             />
-          </Form.Group>
-          <Form.Group className="mb-3">
-            <Form.Label>Kamphistorikk</Form.Label>
-            <Form.Control onChange={handleChange} name="record" type="text" />
-          </Form.Group>
-          <Form.Group className="mb-3">
-            <Form.Label>Vektklasse</Form.Label>
-            <Form.Control onChange={handleChange} name="division" type="text" />
-          </Form.Group>
-          <Form.Group className="mb-3">
-            <Form.Label>Kampsportstil</Form.Label>
-            <Form.Control onChange={handleChange} name="style" type="text" />
-          </Form.Group>
-          <Form.Group className="mb-3">
-            <Form.Label>Kallenavn</Form.Label>
-            <Form.Control onChange={handleChange} name="nickname" type="text" />
-          </Form.Group>
-          <Form.Group>
-            <Form.Label>Velg bilde</Form.Label>
-            <Form.Control onChange={handleChange} name="image" type="file" />
-          </Form.Group>
-          <input
-            onClick={postNewAthlete}
-            type="button"
-            value="Lagre ny utøver"
-          />
-        </Row>
-      </Col>
-      <Col>
-        <Container fluid>hello</Container>
-      </Col>
-    </Form>
+          </Form>
+        </Col>
+      </Row>
+    </Container>
   );
 };
 
