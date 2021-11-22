@@ -6,7 +6,7 @@ function App() {
   return (
     <div>
       <AthleteProvider>
-      <Routing />
+        <Routing />
       </AthleteProvider>
     </div>
   );
