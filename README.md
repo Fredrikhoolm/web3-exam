@@ -54,4 +54,4 @@ Eksamen besvarelsen vår mangler muligheten for å kunne endre en eksisterende u
 
 Vi satte oss ned og planla hvordan vi skulle løse eksamen. Skisserte enkle skisser over hvordan vi hadde lyst til å bygge opp nettsiden.
 
-![alt text](http://url/to/skisse.webp)
+![Getting Started](./images/skisse.webp)
