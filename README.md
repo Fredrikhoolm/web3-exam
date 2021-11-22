@@ -43,3 +43,6 @@ Denne eksamen er laget som en fullstack applikasjon som viser MMA utøvere og ar
 
 ## Design:
 
+## Mangler:
+
+Eksamen besvarelsen vår mangler muligheten for å kunne endre en eksisterende utøvers infromasjon. Når man trykker seg inn på "endre utøver" via generell informajson siden, har vi fått til at informasjonen som gjelder kommer opp og brukeren har muligheten til å endre informasjonskapslene. Når trykker brukeren trykker på "endre informasjon" blir man automatisk rendret tilbake til utøver siden. Det vi ikke har fått til med eksamens prosjektet, er å oppdatere endringen og liste de ut til siden som viser utøverene. Vi føler at vi var veldig nær med å få dette til. Vi tror at feilen ligger i bruken av Context for å hente inn endret informasjon. 
