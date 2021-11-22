@@ -1,13 +1,13 @@
 import { FC } from "react";
-import EditAthleteForm from "../components/athlete/CreateNewAthleteForm";
+import EditAthlete from "../components/athlete/EditAthlete";
 
-const EditAthletePage : FC = () => {
-    return (
-        <section>
-            <h3>Lagre ny utøver</h3>
-            
-        </section>
-    )
-}
+const EditAthletePage: FC = () => {
+  return (
+    <section>
+      <h3>Lagre ny utøver</h3>
+      <EditAthlete />
+    </section>
+  );
+};
 
 export default EditAthletePage;

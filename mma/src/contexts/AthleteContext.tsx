@@ -24,12 +24,8 @@ export const AthleteProvider: FC = ({ children }) => {
     return athletes.find((athlete) => athlete.id === id) as IAthlete;
   };
 
-  const editAthlete () => {
-    athleteService.editAthlete(id, athletes)
-  }
-
   return (
-    <AthleteContext.Provider value={{ athletes, getAthletesById, editAthlete }}>
+    <AthleteContext.Provider value={{ athletes, getAthletesById }}>
       {children}
     </AthleteContext.Provider>
   );
