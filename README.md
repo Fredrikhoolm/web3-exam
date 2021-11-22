@@ -53,5 +53,6 @@ Eksamen besvarelsen vår mangler muligheten for å kunne endre en eksisterende u
 ## Forberedelser:
 
 Vi satte oss ned og planla hvordan vi skulle løse eksamen. Skisserte enkle skisser over hvordan vi hadde lyst til å bygge opp nettsiden.
+![skisse](https://user-images.githubusercontent.com/54721335/142794157-48e5b0b2-687c-499b-9067-5c0d1c84d53e.jpeg)
 
-![Getting Started](./images/skisse.webp)
+
