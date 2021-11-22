@@ -3,7 +3,7 @@ import homepageBackground from "../assets/images/homepage.jpg";
 
 const Home = () => {
   return (
-    <div className="container-fluid-0 position-relative text-center">
+    <div className="container-fluid-0 position-relative text-center mt-5">
       <img src={homepageBackground} alt="homepage.jpg" className="img-fluid" />
       <div>
         <h2 className="homepageHeader position-absolute ">Backyard Brawl</h2>
