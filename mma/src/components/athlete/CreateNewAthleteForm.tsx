@@ -1,17 +1,8 @@
 import { FC, ChangeEvent, useState } from "react";
 import { athleteService } from "../../services/athleteService";
 import { IAthlete } from "../../interfaces/IAthlete";
-import AthleteDetails from "./AthleteDetails";
 import "../../css/CreateNewForm.css";
-import {
-  Col,
-  Form,
-  ListGroup,
-  ListGroupItem,
-  Container,
-  Row,
-  Button,
-} from "react-bootstrap";
+import { Col, Form, Container, Row, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 const CreateNewAthleteForm: FC = () => {

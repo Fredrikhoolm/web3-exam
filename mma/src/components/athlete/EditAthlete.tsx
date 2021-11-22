@@ -1,5 +1,5 @@
 import axios from "axios";
-import { FC, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Button, Col, Container, Form, Row } from "react-bootstrap";
 import { Link, useLocation } from "react-router-dom";
 import { IAthlete } from "../../interfaces/IAthlete";

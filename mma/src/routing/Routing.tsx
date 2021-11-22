@@ -1,6 +1,6 @@
 import { FC } from "react";
 import { Container } from "react-bootstrap";
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import AllAthlete from "../pages/AllAthlete";
 import MainNavigation from "../components/shared/MainNavigation";
 import Home from "../pages/Home";

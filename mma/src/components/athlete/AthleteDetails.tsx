@@ -1,20 +1,9 @@
 import { FC, useContext, useEffect, useState } from "react";
 import { IAthlete } from "../../interfaces/IAthlete";
-import {
-  Card,
-  Button,
-  Col,
-  Container,
-  Row,
-  ListGroupItem,
-  ListGroup,
-  Image,
-} from "react-bootstrap";
+import { Button, Col, Container, Row, ListGroupItem, ListGroup, Image } from "react-bootstrap";
 import { Link, useParams } from "react-router-dom";
 import { AthleteContext } from "../../contexts/AthleteContext";
 import { AthleteContextType } from "../../types/AthleteContextType";
-import AthleteItem from "./AthleteItem";
-import AthleteList from "./AthleteList";
 import { athleteService } from "../../services/athleteService";
 
 const AthleteDetails: FC = () => {
@@ -82,34 +71,21 @@ const AthleteDetails: FC = () => {
           />
         </Col>
       </Row>
-      <Col>
-      <Row>
-        <Link to={`/athletes`}><Button onClick={deleteAthlete}>Slett utøver</Button></Link>
-        <Link to={`/athletes`}><Button variant="primary"> Tilbake </Button></Link>
-      </Row>
-      <Row>
-        <Link to={`/edit-athlete/${id}`}><Button variant="primary">Endre utøver</Button></Link>
-      </Row>
-      </Col>
       <Container className="mt-5 mb-5">
         <Row>
           <Col>
             <Link
               className="d-grid gap-2 text-decoration-none"
-              to={`/athletes`}
-            >
+              to={`/athletes`}>
               <Button variant="outline-dark" size="lg">
-                {" "}
-                Tilbake{" "}
+                Tilbake
               </Button>
             </Link>
           </Col>
-
           <Col>
             <Link
               className="d-grid gap-2 text-decoration-none"
-              to={`/athletes`}
-            >
+              to={`/athletes`}>
               <Button variant="outline-dark" size="lg" onClick={deleteAthlete}>
                 Slett utøver
               </Button>
@@ -118,8 +94,7 @@ const AthleteDetails: FC = () => {
           <Col>
             <Link
               className="d-grid gap-2 text-decoration-none"
-              to={`/edit-athlete/${id}`}
-            >
+              to={`/edit-athlete/${id}`}>
               <Button variant="outline-dark" size="lg">
                 Endre utøver
               </Button>

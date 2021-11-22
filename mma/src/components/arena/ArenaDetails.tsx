@@ -1,7 +1,6 @@
 import { FC, useContext, useEffect, useState } from "react";
-import { IAthlete } from "../../interfaces/IAthlete";
-import { Card, Button, Col, Container, Row, ListGroupItem, ListGroup, Image} from "react-bootstrap";
-import { Link, useParams } from "react-router-dom";
+import { Col, Container, Row, ListGroupItem, ListGroup, Image} from "react-bootstrap";
+import { useParams } from "react-router-dom";
 import { ArenaContext } from "../../contexts/ArenaContext";
 import { ArenaContextType } from "../../types/ArenaContextType";
 import { IArena } from "../../interfaces/IArena";
