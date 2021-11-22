@@ -2,7 +2,6 @@ import { FC, ChangeEvent, useState } from "react";
 import { arenaService } from "../../services/arenaService";
 import { IArena } from "../../interfaces/IArena";
 import { Row, Form, Container, Col, Button } from "react-bootstrap";
-import "../../css/CreateNewForm.css";
 import { Link } from "react-router-dom";
 
 const CreateNewArenaForm: FC = () => {

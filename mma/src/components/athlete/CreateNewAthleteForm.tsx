@@ -1,7 +1,6 @@
 import { FC, ChangeEvent, useState } from "react";
 import { athleteService } from "../../services/athleteService";
 import { IAthlete } from "../../interfaces/IAthlete";
-import "../../css/CreateNewForm.css";
 import { Col, Form, Container, Row, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 

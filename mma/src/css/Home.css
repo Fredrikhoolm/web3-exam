@@ -2,16 +2,6 @@
   height: 100px;
 }
 
-.homepageHeader {
-  top: 50%;
-  left: 50%;
-  transform: translate(20%, -300%);
-  color: rgb(0, 0, 0);
-  font-size: 70px;
-  font-family: Roboto;
-  font-weight: lighter;
-}
-
 .homepageText {
   top: 50%;
   left: 50%;
@@ -41,6 +31,13 @@
   background-repeat: no-repeat;
   background-size: 80%;
   animation: shine 5s linear infinite;
+  top: 50%;
+  left: 50%;
+  transform: translate(20%, -300%);
+  color: rgb(0, 0, 0);
+  font-size: 70px;
+  font-family: Roboto;
+  font-weight: lighter;
 }
 
 @keyframes shine {
