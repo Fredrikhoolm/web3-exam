@@ -8,18 +8,19 @@ const MainNavigation: FC = () => {
   return (
     <Navbar className="navbar shadow navbar-expand-lg navbar-black bg-light">
       <Container>
-        <Navbar.Brand>Backyard Brawl</Navbar.Brand>
+        <Nav>
+          <Nav.Link className="fs-4" as={Link} to="/">
+            Hjem
+          </Nav.Link>
+        </Nav>
         <Navbar.Brand>
           <img src={logo} alt="logo"></img>
         </Navbar.Brand>
         <Nav>
-          <Nav.Link id="home-button" as={Link} to="/">
-            Hjem
-          </Nav.Link>
-          <Nav.Link as={Link} to="/athletes">
+          <Nav.Link className="fs-4" as={Link} to="/athletes">
             Utøvere
           </Nav.Link>
-          <Nav.Link as={Link} to="/arena">
+          <Nav.Link className="fs-4" as={Link} to="/arena">
             Arena
           </Nav.Link>
         </Nav>
