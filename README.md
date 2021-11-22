@@ -24,7 +24,7 @@ For å kunne starte prosjektet er det viktig at databasen og serveren for fronte
 
 For å starte backenden med Visual Studio Code, skrives denne kommandoen i terminalen. (Mappe = mmaapi)
 
-- "dotnet run"
+- "dotnet watch run"
 
 Første gangen prosjektet lastes ned lokalt, må man installere npm pakker, dette utføres ved å skrive denne kommandoen i terminalen. (Utenfor mma og mmaApi)
 
