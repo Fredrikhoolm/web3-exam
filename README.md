@@ -26,6 +26,10 @@ For å starte backenden med Visual Studio Code, skrives denne kommandoen i termi
 
 - "dotnet run"
 
+Første gangen prosjektet lastes ned lokalt, må man installere npm pakker, dette utføres ved å skrive denne kommandoen i terminalen. (Utenfor mma og mmaApi)
+
+- "npm install"
+
 For å kunne starte frontenden med Visual Studio Code, må man installer npm pakker først, dette utføres ved å skrive denne kommandoen i terminalen. (Mappe = mma)
 
 - "npm install"
@@ -50,6 +54,11 @@ Vi har valgt å bruke mest mulig Bootstrap i vår utforming av nettsiden. Med de
 ## Mangler:
 
 Eksamen besvarelsen vår mangler muligheten for å kunne endre en eksisterende utøvers infromasjon. Når man trykker seg inn på "endre utøver" via generell informajson siden, har vi fått til at informasjonen som gjelder kommer opp og brukeren har muligheten til å endre informasjonskapslene. Når trykker brukeren trykker på "endre informasjon" blir man automatisk rendret tilbake til utøver siden. Det vi ikke har fått til med eksamens prosjektet, er å oppdatere endringen og liste de ut til siden som viser utøverene. Vi føler at vi var veldig nær med å få dette til. Vi tror at feilen ligger i bruken av Context for å hente inn endret informasjon. 
+
+Hender også at det denne feilmeldingen kommer når prosjektet lastes ned lokalt og man kjører "npm install" i mma: 
+                   Module not found: Can't resolve 'bootstrap/dist/css/bootstrap.min.css' in '/Users/trondeinar/Desktop/STUDIER/web3-exam/mma/src'
+                   
+Ved å kjøre "npm install" utenfor begge mappene, blir denne feilen borte og koden kjører. Har derfor nevnt det som et steg ved oppstart av prosjekt i tilfellet denne feilen skulle dukke opp. 
 
 
 ## Forberedelser:
