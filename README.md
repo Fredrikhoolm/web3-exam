@@ -43,7 +43,9 @@ Når de nødvendige pakkene er installert, kan man skrive inn denne kommandoen i
 
 Denne eksamen er laget som en fullstack applikasjon som viser MMA utøvere og arenaer som er brukt i forbindelse med MMA kamper. Backenden vår er bygget opp med .NET C# Webapi og kobles opp med backend databasen vår fra Mongo DB. Databasen vår har en singel database (MmmaAthleteDB) og inneholder to collections (MmaAthlete og MmaArena).
 
-## Design:
+## Visuell design:
+
+Vi har valgt å bruke mest mulig Bootstrap i vår utforming av nettsiden. Med dette har vi hatt spesielt fokus på Bootstrap-Grid ved å plassere komponenter på en oversiktelig og brukervennlig måte. Selv med flittig bruk av styling og Bootstrap har vi gått for en stilren og luftig visuell profil. Vi har til tross for dette også lekt oss med ulike animasjoner og effekter på nettsiden både med ren CSS og Bootstrap.
 
 ## Mangler:
 
