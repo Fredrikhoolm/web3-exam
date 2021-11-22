@@ -1,5 +1,5 @@
 import axios from "axios";
-import { useEffect, useState } from "react";
+import { FC, useEffect, useState } from "react";
 import { Button, Col, Container, Form, Row } from "react-bootstrap";
 import { Link, useLocation } from "react-router-dom";
 import { IAthlete } from "../../interfaces/IAthlete";
@@ -26,10 +26,10 @@ const EditAthlete = () => {
   useEffect(() => {
     axios
       .get(`https://localhost:5001/MmaAthlete/${id}`)
-      .then(response => {
+      .then((response) => {
         setAthlete(response.data);
       })
-      .catch(error => {
+      .catch((error) => {
         console.log(error);
       });
   }, [id]);
@@ -78,11 +78,11 @@ const EditAthlete = () => {
         "Content-Type": "application/json",
       },
     })
-      .then(resp => {
+      .then((resp) => {
         console.log(resp);
         console.info(`Successfully updated ${athlete.name}`);
       })
-      .catch(error => {
+      .catch((error) => {
         console.error(error);
       });
   };
@@ -95,12 +95,14 @@ const EditAthlete = () => {
             <Row>
               {" "}
               <Form.Group className="mb-3">
-                <Form.Label>Navn</Form.Label>
+                <Form.Label>
+                  <h5>Navn</h5>
+                </Form.Label>
                 <Form.Control
                   name="name"
                   type="text"
                   value={athlete.name}
-                  onChange={e => handleInput("name", e.target.value)}
+                  onChange={(e) => handleInput("name", e.target.value)}
                   placeholder="Skriv inn navn..."
                 />
               </Form.Group>
@@ -110,7 +112,7 @@ const EditAthlete = () => {
               <Form.Group className="mb-3">
                 <Form.Label>Alder</Form.Label>
                 <Form.Control
-                  onChange={e => handleInput("age", e.target.value)}
+                  onChange={(e) => handleInput("age", e.target.value)}
                   value={athlete.age}
                   name="age"
                   type="number"
@@ -123,7 +125,7 @@ const EditAthlete = () => {
               <Form.Group className="mb-3">
                 <Form.Label>Nasjonalitet</Form.Label>
                 <Form.Control
-                  onChange={e => handleInput("nationality", e.target.value)}
+                  onChange={(e) => handleInput("nationality", e.target.value)}
                   name="nationality"
                   type="text"
                   value={athlete.nationality}
@@ -136,7 +138,7 @@ const EditAthlete = () => {
               <Form.Group className="mb-3">
                 <Form.Label>Kamphistorikk</Form.Label>
                 <Form.Control
-                  onChange={e => handleInput("record", e.target.value)}
+                  onChange={(e) => handleInput("record", e.target.value)}
                   name="record"
                   type="text"
                   value={athlete.record}
@@ -144,63 +146,80 @@ const EditAthlete = () => {
                 />
               </Form.Group>
             </Row>
-
-            <Row>
-              <Form.Group className="mb-3">
-                <Form.Label>Vektklasse</Form.Label>
-                <Form.Control
-                  onChange={e => handleInput("division", e.target.value)}
-                  name="division"
-                  type="text"
-                  value={athlete.division}
-                  placeholder="Skriv inn vektklasse..."
-                />
-              </Form.Group>
-            </Row>
-
-            <Row>
-              <Form.Group className="mb-3">
-                <Form.Label>Kampsportstil</Form.Label>
-                <Form.Control
-                  onChange={e => handleInput("style", e.target.value)}
-                  name="style"
-                  type="text"
-                  value={athlete.style}
-                  placeholder="Skriv inn kampsportstil..."
-                />
-              </Form.Group>
-            </Row>
-
-            <Row>
-              <Form.Group className="mb-3">
-                <Form.Label>Kallenavn</Form.Label>
-                <Form.Control
-                  onChange={e => handleInput("nickname", e.target.value)}
-                  name="nickname"
-                  type="text"
-                  value={athlete.nickname}
-                  placeholder="Skriv inn kallenavn..."
-                />
-              </Form.Group>
-            </Row>
-            <Link to={`/athletes`}>
-              <Button variant="primary" onClick={putAthlete}>
-                Lagre utøver
-              </Button>
-            </Link>
-            <Link to={`/athletes`}>
-              <Button variant="primary"> Tilbake </Button>
-            </Link>
           </Form>
         </Col>
         <Col>
-          <Container fluid className="ImgPlaceholder">
-            Placeholder Image
-          </Container>
+          <Row>
+            <Form.Group className="mb-3">
+              <Form.Label>Vektklasse</Form.Label>
+              <Form.Control
+                onChange={(e) => handleInput("division", e.target.value)}
+                name="division"
+                type="text"
+                value={athlete.division}
+                placeholder="Skriv inn vektklasse..."
+              />
+            </Form.Group>
+          </Row>
+
+          <Row>
+            <Form.Group className="mb-3">
+              <Form.Label>Kampsportstil</Form.Label>
+              <Form.Control
+                onChange={(e) => handleInput("style", e.target.value)}
+                name="style"
+                type="text"
+                value={athlete.style}
+                placeholder="Skriv inn kampsportstil..."
+              />
+            </Form.Group>
+          </Row>
+
+          <Row>
+            <Form.Group className="mb-3">
+              <Form.Label>Kallenavn</Form.Label>
+              <Form.Control
+                onChange={(e) => handleInput("nickname", e.target.value)}
+                name="nickname"
+                type="text"
+                value={athlete.nickname}
+                placeholder="Skriv inn kallenavn..."
+              />
+            </Form.Group>
+          </Row>
+
           <Form.Group>
             <Form.Label>Velg bilde</Form.Label>
             <Form.Control name="image" type="file" />
           </Form.Group>
+        </Col>
+      </Row>
+      <Row>
+        <Col>
+          <Container className="mt-5">
+            <Link
+              className="d-grid gap-2 text-decoration-none"
+              to={`/athletes`}
+            >
+              <Button size="lg" variant="outline-dark" onClick={putAthlete}>
+                {" "}
+                Lagre utøver{" "}
+              </Button>
+            </Link>
+          </Container>
+        </Col>
+        <Col>
+          <Container className="mt-5">
+            <Link
+              className="d-grid gap-2 text-decoration-none"
+              to={`/athletes`}
+            >
+              <Button variant="outline-dark" size="lg">
+                {" "}
+                Tilbake{" "}
+              </Button>
+            </Link>
+          </Container>
         </Col>
       </Row>
     </Container>
