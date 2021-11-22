@@ -10,8 +10,8 @@ const Home = () => {
       </div>
       <div>
         <h4 className="homepageText position-absolute">
-          Welcome to the site where you can add and delete mma athletes and
-          arenas!
+          Velkommen til siden hvor du kan legge til og slette MMA- atleter og
+          arenaer!
         </h4>
       </div>
     </div>
