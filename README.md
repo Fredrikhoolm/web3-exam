@@ -57,7 +57,7 @@ Eksamen besvarelsen vår mangler muligheten for å kunne endre en eksisterende u
 
 Hender også at det denne feilmeldingen kommer når prosjektet lastes ned lokalt og man kjører "npm install" i mma: 
 
-"Module not found: Can't resolve 'bootstrap/dist/css/bootstrap.min.css' in '/Users/trondeinar/Desktop/STUDIER/web3-exam/mma/src'"
+"Module not found: Can't resolve 'bootstrap/dist/css/bootstrap.min.css' in '/Users/anonymous/Desktop/STUDIER/web3-exam/mma/src'"
                    
 Ved å kjøre "npm install" utenfor begge mappene, blir denne feilen borte og koden kjører. Har derfor nevnt det som et steg ved oppstart av prosjekt i tilfellet denne feilen skulle dukke opp. 
 
