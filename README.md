@@ -15,6 +15,8 @@ Rammeverk og språk som er brukt i prosjektet:
 - Axios
 - Styled Components
 - Typescript
+- .NET
+- C#
 
 ## Project Instalasjon:
 
