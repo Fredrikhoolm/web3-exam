@@ -3,8 +3,8 @@
   padding: 2px;
 }
 
-.homestyle {
-  color: aqua;
+#home-button{
+  font-size: 15px;
 }
 
 .navbar-brand img {
