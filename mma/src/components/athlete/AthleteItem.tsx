@@ -8,10 +8,6 @@ const AthleteItem: FC<IAthlete> = ({
   id,
   name,
   image,
-  age,
-  nationality,
-  record,
-  style,
   division,
   nickname,
 }) => {

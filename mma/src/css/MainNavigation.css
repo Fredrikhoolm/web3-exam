@@ -1,12 +1,22 @@
 .navbar {
   margin: 0px;
+  padding: 2px;
 }
 
 .navbar-brand {
+  
+}
+
+.nav{
+  size: 18px;
+}
+
+#home-button{
+  font-size: 15px;
 }
 
 .navbar-brand img {
-  height: 100px;
+  height: 130px;
   /* put value of image height as your need */
   float: left;
 }

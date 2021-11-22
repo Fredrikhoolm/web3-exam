@@ -40,43 +40,38 @@ const AthleteDetails: FC = () => {
         <Col>
           <ListGroup>
             <Row>
-              <ListGroupItem>
-                <h2 className="text-center mt-2">{athlete?.name}</h2>
-                <h5 className="text-center mb-3">"{athlete?.nickname}"</h5>
+              <ListGroupItem className="shadow border-0 ">
+                <h2 className=" border-0 text-center mt-4 ">{athlete?.name}</h2>
+                <h5 className=" border-0 text-center mb-4">{athlete?.nickname}</h5>
               </ListGroupItem>
             </Row>
 
             <Row>
-              <ListGroupItem className="fs-5">
+              <ListGroupItem className=" border-0 fs-4 shadow">
                 Alder: {athlete?.age}
               </ListGroupItem>
             </Row>
             <Row>
-              <ListGroupItem className="fs-5">
+              <ListGroupItem className=" border-0 fs-4 shadow">
                 Vektklasse: {athlete?.division}
               </ListGroupItem>
             </Row>
             <Row>
-              <ListGroupItem className="fs-5">
+              <ListGroupItem className=" border-0 fs-4 shadow">
                 Kampsportstil: {athlete?.style}
               </ListGroupItem>
             </Row>
             <Row>
-              <ListGroupItem className="fs-5">
+              <ListGroupItem className=" border-0 fs-4 shadow">
                 Kamphistorikk: {athlete?.record}
               </ListGroupItem>
             </Row>
             <Row>
-              <ListGroupItem className="fs-5">
+              <ListGroupItem className=" border-0 fs-4 shadow">
                 Nasjonalitet: {athlete?.nationality}
               </ListGroupItem>
             </Row>
-            <Row>
-              <ListGroupItem className="fs-5">
-                Hjemme
-                <Link to={`/arena`}>arena:</Link> {"Arena"}
-              </ListGroupItem>
-            </Row>
+            
           </ListGroup>
         </Col>
         <Col>
