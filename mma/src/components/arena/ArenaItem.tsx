@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 const ArenaItem: FC<IArena> = ({ id, name, image, capacity }) => {
   return (
-    <Card style={{ width: "20rem" }}>
+    <Card className="border-2 shadow text-center" style={{ width: "20rem" }}>
       <Card.Img
         variant="top"
         src={`https://localhost:5001/images/${image}`}

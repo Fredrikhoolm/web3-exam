@@ -6,14 +6,14 @@ import logo from "../../assets/images/backyard-brawl.png";
 
 const MainNavigation: FC = () => {
   return (
-    <Navbar bg="dark" variant="dark">
+    <Navbar className="navbar shadow navbar-expand-lg navbar-black bg-light">
       <Container>
         <Navbar.Brand>Backyard Brawl</Navbar.Brand>
         <Navbar.Brand>
           <img src={logo} alt="logo"></img>
         </Navbar.Brand>
         <Nav>
-          <Nav.Link as={Link} to="/">
+          <Nav.Link id="home-button" as={Link} to="/">
             Hjem
           </Nav.Link>
           <Nav.Link as={Link} to="/athletes">

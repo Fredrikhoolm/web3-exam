@@ -6,7 +6,6 @@ import { AthleteContext } from "../../contexts/AthleteContext";
 import { AthleteContextType } from "../../types/AthleteContextType";
 
 const AthleteList: FC = () => {
-
   const { athletes } = useContext(AthleteContext) as AthleteContextType;
 
   const createAthleteList = () => {
@@ -17,7 +16,14 @@ const AthleteList: FC = () => {
             id={athlete.id}
             name={athlete.name}
             // eslint-disable-next-line react/style-prop-object
-            image={athlete.image} age={""} nationality={""} record={""} style={""} division={""} nickname={athlete.nickname}          />
+            image={athlete.image}
+            age={""}
+            nationality={""}
+            record={""}
+            style={""}
+            division={athlete.division}
+            nickname={athlete.nickname}
+          />
         </Col>
       );
     });

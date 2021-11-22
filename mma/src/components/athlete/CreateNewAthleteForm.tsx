@@ -3,8 +3,16 @@ import { athleteService } from "../../services/athleteService";
 import { IAthlete } from "../../interfaces/IAthlete";
 import AthleteDetails from "./AthleteDetails";
 import "../../css/CreateNewForm.css";
-import { Col, Form, ListGroup, ListGroupItem, Container, Row, Button } from "react-bootstrap";
-import { Link } from "react-router-dom"
+import {
+  Col,
+  Form,
+  ListGroup,
+  ListGroupItem,
+  Container,
+  Row,
+  Button,
+} from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 const CreateNewAthleteForm: FC = () => {
   const [newAthlete, setNewAthlete] = useState<IAthlete>({
@@ -75,7 +83,9 @@ const CreateNewAthleteForm: FC = () => {
             <Row>
               {" "}
               <Form.Group className="mb-3">
-                <Form.Label>Navn</Form.Label>
+                <Form.Label>
+                  <h5>Navn</h5>
+                </Form.Label>
                 <Form.Control
                   onChange={handleChange}
                   name="name"
@@ -87,7 +97,9 @@ const CreateNewAthleteForm: FC = () => {
 
             <Row>
               <Form.Group className="mb-3">
-                <Form.Label>Alder</Form.Label>
+                <Form.Label>
+                  <h5>Alder</h5>
+                </Form.Label>
                 <Form.Control
                   onChange={handleChange}
                   name="age"
@@ -99,7 +111,9 @@ const CreateNewAthleteForm: FC = () => {
 
             <Row>
               <Form.Group className="mb-3">
-                <Form.Label>Nasjonalitet</Form.Label>
+                <Form.Label>
+                  <h5>Nasjonalitet</h5>
+                </Form.Label>
                 <Form.Control
                   onChange={handleChange}
                   name="nationality"
@@ -111,7 +125,9 @@ const CreateNewAthleteForm: FC = () => {
 
             <Row>
               <Form.Group className="mb-3">
-                <Form.Label>Kamphistorikk</Form.Label>
+                <Form.Label>
+                  <h5>Kamphistorikk</h5>
+                </Form.Label>
                 <Form.Control
                   onChange={handleChange}
                   name="record"
@@ -120,56 +136,91 @@ const CreateNewAthleteForm: FC = () => {
                 />
               </Form.Group>
             </Row>
-
-            <Row>
-              <Form.Group className="mb-3">
-                <Form.Label>Vektklasse</Form.Label>
-                <Form.Control
-                  onChange={handleChange}
-                  name="division"
-                  type="text"
-                  placeholder="Skriv inn vektklasse..."
-                />
-              </Form.Group>
-            </Row>
-
-            <Row>
-              <Form.Group className="mb-3">
-                <Form.Label>Kampsportstil</Form.Label>
-                <Form.Control
-                  onChange={handleChange}
-                  name="style"
-                  type="text"
-                  placeholder="Skriv inn kampsportstil..."
-                />
-              </Form.Group>
-            </Row>
-
-            <Row>
-              <Form.Group className="mb-3">
-                <Form.Label>Kallenavn</Form.Label>
-                <Form.Control
-                  onChange={handleChange}
-                  name="nickname"
-                  type="text"
-                  placeholder="Skriv inn kallenavn..."
-                />
-              </Form.Group>
-            </Row>
-          <Link to={`/athletes`}><Button variant="primary" 
-          onClick={postNewAthlete}> Lagre utøver </Button></Link>
-           <Link to={`/athletes`}><Button variant="primary" 
-          > Tilbake </Button></Link>
           </Form>
         </Col>
         <Col>
-          <Container fluid className="ImgPlaceholder">
-            Placeholder Image
-          </Container>
+          <Row>
+            <Form.Group className="mb-3">
+              <Form.Label>
+                <h5>Vektklasse</h5>
+              </Form.Label>
+              <Form.Control
+                onChange={handleChange}
+                name="division"
+                type="text"
+                placeholder="Skriv inn vektklasse..."
+              />
+            </Form.Group>
+          </Row>
+
+          <Row>
+            <Form.Group className="mb-3">
+              <Form.Label>
+                <h5>Kampsportstil</h5>
+              </Form.Label>
+              <Form.Control
+                onChange={handleChange}
+                name="style"
+                type="text"
+                placeholder="Skriv inn kampsportstil..."
+              />
+            </Form.Group>
+          </Row>
+
+          <Row>
+            <Form.Group className="mb-3">
+              <Form.Label>
+                {" "}
+                <h5>Kallenavn</h5>
+              </Form.Label>
+              <Form.Control
+                onChange={handleChange}
+                name="nickname"
+                type="text"
+                placeholder="Skriv inn kallenavn..."
+              />
+            </Form.Group>
+          </Row>
+
           <Form.Group>
-            <Form.Label>Velg bilde</Form.Label>
-            <Form.Control onChange={handleChange} name="image" type="file" />
+            <Form.Label>
+              <h5>Last opp bilde</h5>
+            </Form.Label>
+            <Form.Control
+              onChange={handleChange}
+              name="image"
+              type="file"
+              size="lg"
+            />
           </Form.Group>
+        </Col>
+      </Row>
+      <Row>
+        <Col>
+          <Container className="mt-5">
+            <Link
+              className="d-grid gap-2 text-decoration-none"
+              to={`/athletes`}
+            >
+              <Button size="lg" variant="outline-dark" onClick={postNewAthlete}>
+                {" "}
+                Lagre utøver{" "}
+              </Button>
+            </Link>
+          </Container>
+        </Col>
+        <Col>
+          <Container className="mt-5">
+            <Link
+              className="d-grid gap-2 text-decoration-none"
+              to={`/athletes`}
+            >
+              <Button variant="outline-dark" size="lg">
+                {" "}
+                Tilbake{" "}
+              </Button>
+            </Link>
+          </Container>
         </Col>
       </Row>
     </Container>
