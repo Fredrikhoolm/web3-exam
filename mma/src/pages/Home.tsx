@@ -10,7 +10,7 @@ const Home = () => {
       </div>
       <div>
         <h4 className="homepageText position-absolute">
-          Welcome to the site where you can add, delete and edit athletes and
+          Welcome to the site where you can add and delete mma athletes and
           arenas!
         </h4>
       </div>
